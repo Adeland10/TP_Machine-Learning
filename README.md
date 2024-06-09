@@ -1,5 +1,7 @@
 # TP_Machine-Learning
 
+PS : Voir mes codes et graphiques sur mon fichier google collab
+
 PARTIE 1 : Analyse Exploratoire des Données (EDA)
 -----------------------------------------------------------------------------------------------------------------------------
 1.1 Vue d'ensemble des données :
@@ -63,17 +65,45 @@ Moyenne d'age homes fumeurs = 43.437005664132265
 
 fumeurs = df[df['smoking'] == 1]
 male_fumeurs = fumeurs[fumeurs["gender"] == 'M']
-
 male_fumeurs['age'].mean()
+
 -----------------------------------------------------------------------------------------------------------------------------
 1.4 Analyse de corrélation :
-Calculer et visualiser la matrice de corrélation, le but étant d'étudier la corrélation des variables entre elles. Questions :
+Calculer et visualiser la matrice de corrélation, le but étant d'étudier la corrélation des variables entre elles. 
 
-Quel problème rencontrez-vous ?
+Questions :
+
+1) Quel problème rencontrez-vous ?
+J'obtiens une erreur : "ValueError: could not convert string to float: 'F'" sûrement due au fait que j'ai des valeurs abberantes et des variables catégorielles dans mon fichier.
 
 Passez à la partie 2 et revenez aux questions suivante plus tard.
 
-Quelles variables sont les plus fortement corrélées entre elles ?
+2)Quelles variables sont les plus fortement corrélées entre elles ?
+pas réuissi à faire la matrice de corrélation
+3)Comment la variable cible (fumeur) est-elle corrélée avec les autres variables ? Donnez le top 3
+pas réussi à faire la matrice de corrélation
 
-Comment la variable cible (fumeur) est-elle corrélée avec les autres variables ? Donnez le top 3
+----------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------
+Partie 2 : Data pre-processing
+----------------------------------------------------------------------------------------------------------------------------
+2.1 Gestion des Valeurs Manquantes :
+(voir mes codes pour application de la méthode)
+
+Questions :
+1) Quelle méthode avez-vous choisie pour gérer les valeurs manquantes et pourquoi ?
+J'ai choisi d'utiliser l'imputation par la moyenne pour les variables numériques et par la mode pour les variables catégorielles. Parce que c'est une méthode simple qui permet de conserver toutes les données sans en supprimer, ce qui est utile si les valeurs manquantes sont rares.
+
+2) Comment cette méthode impacte-t-elle les données ?
+L'avantage c'est qu'on garde toutes les données, donc on ne perd aucune information. Mais, elle peut introduire un biais si les valeurs manquantes ne sont pas distribuées de manière aléatoire et peut réduire la variabilité des données, affectant ainsi certains types d'analyses statistiques.
+----------------------------------------------------------------------------------------------------------------------------
+2.2 Encodage des catégories
+Questions :
+1) Quel autre traitement de la donnée pourriez-vous faire pour optimiser l'entraînement ?
+Normalisation/Standardisation des variables numériques : permet de mettre toutes les variables sur la même échelle, bien pour améliorer les performances des algorithmes de machine learning.
+
+----------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------
+Partie 3 
+----------------------------------------------------------------------------------------------------------------------------
 
